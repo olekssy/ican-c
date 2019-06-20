@@ -9,18 +9,26 @@ A storage of Source Code bits and pieces written in C for HPC.
 
 
 ## Description
-Files are structured into directories, according to the level of complexity, origin and purpose.
+Collection of standalone applications of high-performance code in pure C, for solving CPU-intensive computational problems. Files are structured into directories, according to the level of complexity, origin and purpose.
 
-- __primer/__ - examples and exercises from C Primer Plus (6th)
-- __finance/__ - quantitative finance apps and models
-- __math/__ - applied mathematics apps: number theory, linear algebra, complex nums, etc.
-- __other/__ - all other stuff, that does not belong to any category
+### Math
+Applied math: number theory, linear algebra, complex nums, etc.
+- 64-bit prime integers calculator
+- Fibonacci series
+- approximate pi with the Nilakantha series
+
+### Finance
+Quantitative finance models and algorithms
+- mortgage calculator
+- perpetuity PV calculator
+
+### Other exciting stuff
+- algorithm for approximating Lagrangian points L1, L2, L3
+- RSA encryption keys generator
 
 
 ## Clone, Compile, Run
-To make the source code executable, you need to compile it first. Source code follows C11 standard, make sure your compiler is up to date (or at least C99).
-
-__Friendly advice__: inspect the source code before compiling and, god forbid, running it. Remember, C does not forgive mistakes. If it breaks your OS, it's not my fault. I warned you.
+To make the source code executable, you need to compile it first. Source code follows C18 standard. Make sure your compiler is up to date or at least can handle C11. In some cases C99 might work as well, if you choose to compile with a toaster.
 
 Clone repository
 ```bash
@@ -37,7 +45,7 @@ Compile Source code into executable. Likely, in UNIX system _cc_ stands for alia
 cc filename.c -o filename.out
 ```
 
-Note: some SC files have math function _pow()_, which sometimes does not allow to compile source code correctly. Fix by appending command with _-lm_ flag
+Note: some apps depends on _math.h_, that requires _-lm_ flag for compiling.
 ```bash
 cc filename.c -o filename.out -lm
 ```
@@ -46,6 +54,8 @@ Finally, run executable _*.out_ by calling it
 ```bash
 ./filename.out
 ```
+
+__Friendly advice__: inspect the source code before compiling and, god forbid, running it. Remember, C does not forgive mistakes. If it breaks your OS, it's not my fault. I warned you.
 
 
 ## License and Copyright

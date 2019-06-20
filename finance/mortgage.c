@@ -1,27 +1,27 @@
 #include <math.h>
 #include <stdio.h>
 
-// include -lm flag to compile pow
-// cc  main.c -o main -lm
+// Simple mortgage calculator with payments scheduler
+// include -lm flag to compile
 
 void schedule(double p, int t, double r, float mp);
 int main(void) {
-  long double p;  // principal amount
-  int t;          // number of years
-  long double r;  // interest rate
-  long double mp; // monthly pmt
+  double p;   // principal amount
+  unsigned t; // number of years
+  double r;   // interest rate
+  double mp;  // monthly pmt
 
   // prompt user for variables
   printf("Enter principal amount = ");
-  scanf("%Lg", &p);
+  scanf("%lg", &p);
   printf("Enter number of years = ");
-  scanf("%d", &t);
+  scanf("%u", &t);
   printf("Enter interest rate (e.g. 0.05) = ");
-  scanf("%Lg", &r);
+  scanf("%lg", &r);
 
   // calculate monthly pmt
   mp = p * r / 12 / (1 - pow(1 + r / 12, -t * 12));
-  printf("Monthly payment = %Lg\n", mp);
+  printf("Monthly payment = %g\n", mp);
 
   // display schedule of payments
   schedule(p, t, r, mp);

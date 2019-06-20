@@ -1,8 +1,9 @@
 #include <stdio.h>
 
+// calculate PV of perpetuity
+
 float dt(void);
-int main(void) // calculate PV of perpetuity
-{
+int main(void) {
   long double cf; // cash-flow of perpetuity
   long double result;
 
