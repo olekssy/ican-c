@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.5.0] - 2019-06-20
+### Added
+- selective performance and stability improvements
+
+### Changed
+- organization of the SC storage
+- project description in README
+
+### Removed
+- primer dir with all trivial stuff
+
+
 ## [0.4.0] - 2019-06-20
 ### Added
 - fibonacci series calculator
