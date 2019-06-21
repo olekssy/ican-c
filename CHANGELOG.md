@@ -5,6 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.6.0] - 2019-06-21
+### Added
+- algorithm for generating and visualizing Mandelbrot set from https://rosettacode.org/
+- Mars and Jupiter Lagrangian points L1, L2, L3
+- Caesar cipher
+- Mandelbrot set picture to README
+
+### Changed
+- performance improvements to lagrangian points
+
+
 ## [0.5.0] - 2019-06-20
 ### Added
 - selective performance and stability improvements
