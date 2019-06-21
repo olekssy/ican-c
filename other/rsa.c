@@ -34,16 +34,6 @@ int main(void) {
   printf("Public key: \nn = %u \ne = %u \n", n, e);
   printf("Private key: \nn = %u \nd = %u \n", n, d);
 
-  // printf("Enter message: ");
-  // scanf("%u", &mess);
-  // // encrypt message
-  // // mess = 14;
-  // cyph = encrypt(mess, e, n);
-  // printf("\nEncrypted message: %u\n", cyph);
-  // // decrypt message
-  // mess = decrypt(cyph, d, n);
-  // printf("Decrypted message: %u\n", mess);
-
   return 0;
 }
 
