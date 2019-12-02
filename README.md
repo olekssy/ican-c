@@ -33,9 +33,12 @@ Astronomy, cryptography and other exciting stuff
 - RSA encryption keys generator
 - Caesar cipher for strings encryption
 
+### Liners
+Simple programs that do not fall into any particular cathegory
+
 
 ## Clone, Compile, Run
-To make the source code executable, you need to compile it first. Source code follows C18 standard. Make sure your compiler is up to date or at least can handle C11. In some cases C99 might work as well, if you choose to compile with a toaster.
+To make the source code executable, you need to compile it first. Source code follows C11 standard. Make sure your compiler is up to date or at least can handle C99.
 
 Clone repository
 ```bash
@@ -57,12 +60,10 @@ Note: some apps depends on _math.h_, that requires _-lm_ flag for compiling.
 cc filename.c -o filename -lm
 ```
 
-Finally, run executable _*.out_ by calling it
+Finally, run executable by calling it
 ```bash
 ./filename
 ```
-
-__Friendly advice__: inspect the source code before compiling and, god forbid, running it. Remember, C does not forgive mistakes. If it breaks your OS, it's not my fault. I warned you.
 
 
 ## License and Copyright
