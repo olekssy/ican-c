@@ -8,7 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.7.0] - 2019-12-02
 ### Added
 - bunch of one-line programs to 'liners'
-- minor edits to README
+- control statements capstone grocery_system.c
+- time delay header
+- added c binaries to .gitignore
+
+### Changed
+- simplified README
+
 
 ## [0.6.0] - 2019-06-21
 ### Added
