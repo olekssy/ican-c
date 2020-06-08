@@ -10,3 +10,5 @@
 *.ppm
 *.png
 *.xcf
+*.o
+*.swp
