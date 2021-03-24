@@ -1,5 +1,5 @@
-/* Given a fixed length array arr of integers, 
- * duplicate each occurrence of zero, shifting 
+/* Given a fixed length array arr of integers,
+ * duplicate each occurrence of zero, shifting
  * the remaining elements to the right. */
 
 #include <stdlib.h>
@@ -21,10 +21,10 @@ int main(void) {
         if (arr[i] == 0) {
             for (size_t k = SIZE - 1; k > i; k--) {
                 arr[k] = arr[k - 1];
-            };
+            }
             i++;
-        };
-    };
+        }
+    }
 
     print_array(arr, SIZE);
 
@@ -37,4 +37,3 @@ void print_array(unsigned arr[], size_t arr_size) {
     };
      printf("\n");
 }
-    

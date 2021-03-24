@@ -1,14 +1,2 @@
-# ignore all incl c binaries
-*
-# unignore everything /w extension
-!*.*
-# unignore dirs
-!*/
-#ignore selectively
-*.out
-*.py
-*.ppm
-*.png
-*.xcf
+# ignore binaries
 *.o
-*.swp
