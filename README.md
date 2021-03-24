@@ -12,7 +12,8 @@ A storage of Source Code bits and pieces written in C for HPC.
 ## Description
 Collection of standalone applications of high-performance code in pure C, for solving CPU-intensive computational problems. Files are structured into directories, according to the level of complexity, origin and purpose.
 
-
+### Algorithms
+Algorithmic challenges, data structures, arrays, recursion, searches, etc.
 
 ### Math
 Applied math: number theory, linear algebra, complex numbers, etc.
@@ -67,6 +68,6 @@ Finally, run executable by calling it
 
 
 ## License and Copyright
-Copyright (c) 2019 Oleksii Lialka
+Copyright (c) 2021 Oleksii Lialka
 
 Licensed under the [MIT License](LICENSE.md).
