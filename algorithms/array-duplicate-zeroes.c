@@ -1,6 +1,9 @@
 /* Given a fixed length array arr of integers,
  * duplicate each occurrence of zero, shifting
- * the remaining elements to the right. */
+ * the remaining elements to the right. 
+ *
+ * https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
+ * */
 
 #include <stdlib.h>
 #include <stdio.h>
