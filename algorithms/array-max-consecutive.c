@@ -6,9 +6,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "arrays.h"
 
 int main(void) {
-
+    int numsSize = 6;
     int nums[] = {
         [0] = 1,
         [1] = 1,
@@ -17,9 +18,10 @@ int main(void) {
         [4] = 1,
         [5] = 1
     };
-    int numsSize = 6;
     unsigned count = 0;
     unsigned countBest = 0;
+
+    print_array(nums, numsSize);
 
     for (size_t i = 0; i < numsSize; i++) {
         if (nums[i] == 1) {
@@ -32,7 +34,6 @@ int main(void) {
         else {
             count = 0;
         }
-        // printf("%u %u\n", countBest, count);
     }
 
     printf("%u\n", countBest);

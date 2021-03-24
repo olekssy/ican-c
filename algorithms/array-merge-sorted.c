@@ -6,19 +6,18 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-
-void print_array(unsigned arr[], int arr_size);
+#include "arrays.h"
 
 int main(void) {
     const int m = 3;
     const int n = 3;
     const int l = m + n;
-    unsigned nums1[l] = {
+    int nums1[l] = {
        [0] = 1,
        [1] = 2,
        [2] = 3
     };
-    unsigned nums2[n] = {
+    int nums2[n] = {
        [0] = 2,
        [1] = 5,
        [2] = 6
@@ -42,15 +41,12 @@ int main(void) {
             k = k - 1;
             i = i - 1;
         }
-        // print_array(nums1, l);
-        // printf("[i, j, k] = [%d, %d, %d]\n", i, j, k);
     }
 
     while (j >= 0) {
         nums1[k] = nums2[j];
         k = k - 1;
         j = j - 1;
-        // print_array(nums1, l);
     }
     
     print_array(nums1, l);
@@ -58,9 +54,3 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-void print_array(unsigned arr[], int arr_size) {
-    for (size_t i = 0; i < arr_size; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}

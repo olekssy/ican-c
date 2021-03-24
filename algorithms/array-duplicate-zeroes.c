@@ -3,40 +3,33 @@
  * the remaining elements to the right. 
  *
  * https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
- * */
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-void print_array(unsigned arr[], size_t arr_size);
+#include "arrays.h"
 
 int main(void) {
-    const size_t SIZE = 7;
-    unsigned arr[SIZE] = {
+    const int arrSize = 7;
+    int arr[arrSize] = {
         [0] = 1,
         [2] = 2,
         [4] = 3
     };
 
-    print_array(arr, SIZE);
+    print_array(arr, arrSize);
 
-    for (size_t i = 0; i < SIZE; i++) {
+    for (size_t i = 0; i < arrSize; i++) {
         if (arr[i] == 0) {
-            for (size_t k = SIZE - 1; k > i; k--) {
+            for (size_t k = arrSize - 1; k > i; k--) {
                 arr[k] = arr[k - 1];
             }
             i++;
         }
     }
 
-    print_array(arr, SIZE);
+    print_array(arr, arrSize);
 
     return EXIT_SUCCESS;
 }
 
-void print_array(unsigned arr[], size_t arr_size) {
-    for (size_t i = 0; i < arr_size; i++) {
-        printf("%d ", arr[i]);
-    };
-     printf("\n");
-}

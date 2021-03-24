@@ -5,6 +5,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "arrays.h"
 
 int main(void) {
     const int numsSize = 4;
@@ -15,6 +16,8 @@ int main(void) {
         [3] = 1771
     };
     int count = 0;
+
+    print_array(nums, numsSize);
 
     for (size_t i = 0; i < numsSize; i++) {
         if (nums[i] >= 1e1 && nums[i] < 1e2) {
