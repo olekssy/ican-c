@@ -1,5 +1,3 @@
-![logo](./other/icanc_logo_mid.png)
-
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/lialkaas/hello-c.svg)](CHANGELOG.md)
 [![GitHub last commit](https://img.shields.io/github/last-commit/lialkaas/hello-c.svg)](CHANGELOG.md)
 [![GitHub](https://img.shields.io/github/license/lialkaas/hello-c.svg)](LICENSE.md)
@@ -13,7 +11,7 @@ A storage of Source Code bits and pieces written in C for HPC.
 Collection of standalone applications of high-performance code in pure C, for solving CPU-intensive computational problems. Files are structured into directories, according to the level of complexity, origin and purpose.
 
 ### Algorithms
-Algorithmic challenges, data structures, arrays, recursion, searches, etc.
+LeetCode challenges, algorithms, data structures, arrays, recursion, searches, etc.
 
 ### Math
 Applied math: number theory, linear algebra, complex numbers, etc.
