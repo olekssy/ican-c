@@ -8,8 +8,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-
-void print_array(int arr[], int arrSize);
+#include "arrays.h"
 
 int main(void) {
     int numsSize = 4;
@@ -36,12 +35,5 @@ int main(void) {
     print_array(nums, numsSize);
 
     return EXIT_SUCCESS;
-}
-
-void print_array(int arr[], int arrSize) {
-    for (size_t i = 0; i < arrSize; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
 }
 
