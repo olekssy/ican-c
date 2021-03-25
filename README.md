@@ -1,10 +1,9 @@
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/lialkaas/hello-c.svg)](CHANGELOG.md)
 [![GitHub last commit](https://img.shields.io/github/last-commit/lialkaas/hello-c.svg)](CHANGELOG.md)
 [![GitHub](https://img.shields.io/github/license/lialkaas/hello-c.svg)](LICENSE.md)
 
 >_"Oh say, can you C?"_
 
-A storage of Source Code bits and pieces written in C for HPC.
+A storage of Source Code bits and pieces written in C.
 
 
 ## Description
