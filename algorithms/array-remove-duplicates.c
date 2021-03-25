@@ -11,13 +11,34 @@
 #include "arrays.h"
 
 int main(void) {
-    int numsSize = 3;
+    int numsSize = 10;
     int nums[] = {
-        [0] = 1,
-        [1] = 1,
-        [2] = 2,
+        [0] = 0,
+        [1] = 0,
+        [2] = 1,
+        [3] = 1,
+        [4] = 1,
+        [5] = 2,
+        [6] = 2,
+        [7] = 3,
+        [8] = 3,
+        [9] = 4,
     };
-    int p = numsSize - 1;
+    int u = numsSize - 1;   // last unique element pointer
+
+    print_array(nums, numsSize);
+
+    for (int i = u - 1; i >= 0; i--) {
+        if (nums[i] == nums[u]) {
+            for (int p = u; p < numsSize - 1; p++) {
+                nums[p] = nums[p + 1];
+            }
+            numsSize--;
+        }
+        u--;
+
+        // print_array(nums, numsSize);
+    }
 
     print_array(nums, numsSize);
 
