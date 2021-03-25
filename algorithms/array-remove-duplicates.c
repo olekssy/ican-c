@@ -24,20 +24,18 @@ int main(void) {
         [8] = 3,
         [9] = 4,
     };
-    int u = numsSize - 1;   // last unique element pointer
 
     print_array(nums, numsSize);
 
-    for (int i = u - 1; i >= 0; i--) {
-        if (nums[i] == nums[u]) {
-            for (int p = u; p < numsSize - 1; p++) {
+    for (int i = numsSize - 1; i > 0; i--) {
+        if (nums[i - 1] == nums[i]) {
+            for (int p = i; p < numsSize - 1; p++) {
                 nums[p] = nums[p + 1];
             }
             numsSize--;
         }
-        u--;
 
-        // print_array(nums, numsSize);
+        print_array(nums, numsSize);
     }
 
     print_array(nums, numsSize);
