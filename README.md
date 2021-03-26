@@ -10,7 +10,8 @@ A storage of Source Code bits and pieces written in C.
 Collection of standalone applications of high-performance code in pure C, for solving CPU-intensive computational problems. Files are structured into directories, according to the level of complexity, origin and purpose.
 
 ### Algorithms
-LeetCode challenges, algorithms, data structures, arrays, recursion, searches, etc.
+LeetCode challenges, algorithms, data structures, etc.
+- Arrays 101
 
 ### Math
 Applied math: number theory, linear algebra, complex numbers, etc.
