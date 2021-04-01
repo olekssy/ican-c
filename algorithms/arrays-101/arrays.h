@@ -1,15 +1,7 @@
-/* Universal helper functions for
- * operations on arrays.
- */
+/* Universal helper function declarations for operations on arrays. */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "arrays.c"
 
-void print_array(int* arr, int arrSize);
+void print_array(const int* arr, int arrSize); // DEPRECATED
+void show_array(const int* arr, size_t arrSize);
 
-void print_array(int* arr, int arrSize) {
-    for (size_t i = 0; i < arrSize; i++) {
-        printf("%d ", * (arr + i));
-    }
-    printf("\n");
-}
