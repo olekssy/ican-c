@@ -1,4 +1,4 @@
-/* Return the minimum number of students that must move in order 
+/* Return the minimum number of students that must move in order
  * for all students to be standing in non-decreasing order of height.
  *
  * https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3228/
@@ -9,38 +9,44 @@
 #include "arrays.h"
 
 int heightChecker(int* heights, int heightsSize);
-void insertionSort(int* arr, size_t arrSize);
 
 int main(void) {
     int arrSize = 5;
     int arr[] = {6, 2, 3, 4, 5};
 
     show_array(arr, arrSize);
-    insertionSort(arr, arrSize);
-    show_array(arr, arrSize);
+    printf("%d\n", heightChecker(arr, arrSize));
+
 
     return EXIT_SUCCESS;
 }
 
 int heightChecker(int* heights, int heightsSize) {
+    int* arrSorted = malloc(heightsSize * sizeof(int));
     int steps = 0;
 
-    return steps;
-}
-
-void insertionSort(int* arr, size_t arrSize) {
-    /* In-place insertion sort of int array */
-    size_t pr, pw;
+    // duplicate and sort initial array
+    for (int i = 0; i < heightsSize; i++) {
+        *(arrSorted + i) = *(heights + i);
+    }
+    // Insertion sort of int array
+    int pr, pw;
     int key;
-
-    for (size_t pr = 1; pr < arrSize; pr++) {
-        key = *(arr + pr);
+    for (int pr = 1; pr < heightsSize; pr++) {
+        key = *(arrSorted + pr);
         pw = pr - 1;
-        while (pw >= 0 && arr[pw] > key) {
-            arr[pw + 1] = *(arr + pw);
+        while (pw >= 0 && arrSorted[pw] > key) {
+            arrSorted[pw + 1] = *(arrSorted + pw);
             pw--;
         }
-        arr[pw + 1] = key;
+        arrSorted[pw + 1] = key;
     }
-}
 
+    // count how many elements are out of place
+    for (int i = 0; i < heightsSize; i++) {
+        if (heights[i] != arrSorted[i]) {
+            steps++;
+        }
+    }
+    return steps;
+}
