@@ -18,3 +18,28 @@ void show_array(const int* arr, size_t arrSize) {
     printf("\n");
 }
 
+int* duplicateArray(int* arr, size_t arrSize) {
+    /* Duplicate array, return copy array pointer */
+    int* arrCopy = malloc(arrSize * sizeof(int));
+    for (size_t i = 0; i < arrSize; i++) {
+        *(arrCopy + i) = *(arr + i);
+    }
+    return arrCopy;
+}
+
+void insertionSort(int* arr, size_t arrSize) {
+    /* In-place insertion sort of int array */
+    size_t pr, pw;
+    int key;
+
+    for (size_t pr = 1; pr < arrSize; pr++) {
+        key = *(arr + pr);
+        pw = pr - 1;
+        while (pw >= 0 && arr[pw] > key) {
+            arr[pw + 1] = *(arr + pw);
+            pw--;
+        }
+        arr[pw + 1] = key;
+    }
+}
+
