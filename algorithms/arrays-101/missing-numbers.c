@@ -7,32 +7,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
+#include <stdbool.h>
 #include "arrays.h"
 
 int* findDisappearedNumbers(int* nums, int numsSize, int* returnSize);
 
 int main(void) {
-    int arrSize = 8;
-    int* returnSize = &arrSize;
-    int arr[] = {4,3,2,7,8,2,3,1};
+    int numsSize = 8;
+    int* returnSize = &numsSize;
+    int nums[] = {4,3,2,7,8,2,3,1};
 
-    show_array(arr, arrSize);
-    show_array(findDisappearedNumbers(arr, arrSize, returnSize), *returnSize);
+    show_array(nums, numsSize);
+    show_array(findDisappearedNumbers(nums, numsSize, returnSize), *returnSize);
 
     return EXIT_SUCCESS;
 }
 
 int* findDisappearedNumbers(int* nums, int numsSize, int* returnSize){
-    int maxNumber = INT_MIN;
+    int *missing = calloc(numsSize + 1, sizeof(int));
+    *returnSize = 0;
 
-    // find max element in array
-    for (size_t i = 0; i < numsSize; i++) {
-        if (nums[i] >= maxNumber) {
-            maxNumber = *(nums + i);
-        }
-    }
+    for (int i = 0; i < numsSize; ++i)
+        missing[nums[i]] = 1;
 
-    printf("maxNumber = %d\n", maxNumber);
+    for (int i = 1; i <= numsSize; ++i)
+        if (missing[i] == 0)
+            missing[(*returnSize) ++] = i;
 
-    return nums;
+    return missing;
 }
