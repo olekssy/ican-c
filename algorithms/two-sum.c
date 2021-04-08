@@ -4,7 +4,6 @@ https://leetcode.com/problems/two-sum/ */
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include "helpers.h"
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize);
