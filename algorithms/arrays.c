@@ -11,7 +11,7 @@ void show_array(const int* arr, size_t arrSize) {
     printf("\n");
 }
 
-int* duplicateArray(int* arr, size_t arrSize) {
+int* duplicateArray(const int* arr, size_t arrSize) {
     /* Duplicate int array, return copy array pointer */
     int* arrCopy = (int*)malloc(arrSize * sizeof(int));
     for (size_t i = 0; i < arrSize; i++) {
