@@ -24,19 +24,18 @@ int main(void) {
 
 int maxArea(int* height, int heightSize) {
     int maxSurface = 0;
-    int currSurface;
+    int surface;
+    size_t pLeft = 0;
+    size_t pRight = heightSize - 1;
 
-    for (size_t rp = heightSize - 1; rp > 0; rp--) {
-        for (size_t lp = 0; lp < heightSize - 1; lp++) {
-            if (height[rp] > height[lp]) {
-                currSurface = height[lp] * (rp - lp);
-            } else {
-                currSurface = height[rp] * (rp -lp);
-            }
+    while (pLeft != pRight) {
+        surface =  (pRight - pLeft) * (*(height + pLeft) > *(height + pRight) ? height[pRight] : height[pLeft]); 
+        maxSurface = (surface > maxSurface ? surface : maxSurface);
 
-            if (currSurface > maxSurface) {
-                maxSurface = currSurface;
-            }
+        if (*(height + pLeft) > *(height + pRight)) {
+            pRight--;
+        } else {
+            pLeft++;
         }
     }
 
