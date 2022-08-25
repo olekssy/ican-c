@@ -12,7 +12,8 @@ to see the file use external application ( graphic viewer)
  */
 #include <math.h>
 #include <stdio.h>
-int main() {
+int main()
+{
   /* screen ( integer) coordinate */
   int iX, iY;
   const int iXmax = 2000;
@@ -48,11 +49,13 @@ int main() {
   fprintf(fp, "P6\n %s\n %d\n %d\n %d\n", comment, iXmax, iYmax,
           MaxColorComponentValue);
   /* compute and write image data bytes to the file*/
-  for (iY = 0; iY < iYmax; iY++) {
+  for (iY = 0; iY < iYmax; iY++)
+  {
     Cy = CyMin + iY * PixelHeight;
     if (fabs(Cy) < PixelHeight / 2)
       Cy = 0.0; /* Main antenna */
-    for (iX = 0; iX < iXmax; iX++) {
+    for (iX = 0; iX < iXmax; iX++)
+    {
       Cx = CxMin + iX * PixelWidth;
       /* initial value of orbit = critical point Z= 0 */
       Zx = 0.0;
@@ -61,7 +64,8 @@ int main() {
       Zy2 = Zy * Zy;
       /* */
       for (Iteration = 0; Iteration < IterationMax && ((Zx2 + Zy2) < ER2);
-           Iteration++) {
+           Iteration++)
+      {
         Zy = 2 * Zx * Zy + Cy;
         Zx = Zx2 - Zy2 + Cx;
         Zx2 = Zx * Zx;
@@ -69,11 +73,14 @@ int main() {
         // printf("%2.5e | %2.5e\n", Zx, Zy);
       };
       /* compute  pixel color (24 bit = 3 bytes) */
-      if (Iteration == IterationMax) { /*  interior of Mandelbrot set = black */
-        color[0] = 0;
-        color[1] = 0;
-        color[2] = 128;
-      } else {          /* exterior of Mandelbrot set = white */
+      if (Iteration == IterationMax)
+      { /*  interior of Mandelbrot set = black */
+        color[0] = 91;
+        color[1] = 9;
+        color[2] = 20;
+      }
+      else
+      {                 /* exterior of Mandelbrot set = white */
         color[0] = 255; /* Red*/
         color[1] = 255; /* Green */
         color[2] = 255; /* Blue */
