@@ -3,7 +3,7 @@
 
 >_"Oh say, can you C?"_
 
-A storage of Source Code bits and pieces written in C.
+A storage of Source Code bits and pieces written in C and C++.
 
 
 ## Description
@@ -64,6 +64,11 @@ Finally, run executable by calling it
 ./filename
 ```
 
+### C++
+Compile C++ code with clang++ and flags
+```bash
+clang++ -std=c++2a -Wall -O1 filename.cpp -o filename.o
+```
 
 ## License and Copyright
 Copyright (c) 2021 Oleksii Lialka
