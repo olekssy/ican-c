@@ -1,5 +1,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/lialkaas/hello-c.svg)](CHANGELOG.md)
 [![GitHub](https://img.shields.io/github/license/lialkaas/hello-c.svg)](LICENSE.md)
+![Version C++](https://img.shields.io/badge/version-C%2B%2B20-lightblue)
+![Version C](https://img.shields.io/badge/version-C17-lightblue)
+
 
 >_"Oh say, can you C?"_
 
